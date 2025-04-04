@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UQFC - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #800000;
+            /* Maroon */
+            --secondary-color: #4d0000;
+            /* Darker maroon */
+            --accent-color: #008744;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .hero {
+            background: url('./team.jpg') center/cover no-repeat;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .content h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #006633;
+        }
+
+        .news-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .news-card {
+            background-color: #f2f2f2;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .news-card h4 {
+            margin-top: 0;
+        }
+
+        .sponsor-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            padding: 2rem;
+            background: #f0f0f0;
+            scroll-snap-type: x mandatory;
+        }
+
+        .sponsor-carousel img {
+            height: 80px;
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .sponsor-carousel img:hover {
+            filter: grayscale(0);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">UQ Football Club</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Teams</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to UQFC</h2>
+    </section>
+
+    <section class="content">
+        <h3>About Us</h3>
+        <p>UQFC is a community-focused football club in Brisbane offering playing and coaching opportunities for all
+            ages and levels. Whether you're chasing fun, fitness, or competition—we welcome you.</p>
+        <a class="cta-button" href="#">Register Now</a>
+
+        <div class="news-section">
+            <div class="news-card">
+                <h4>2025 Season Kicks Off</h4>
+                <p>Registrations are now open for the 2025 season. Secure your spot today!</p>
+            </div>
+            <div class="news-card">
+                <h4>UQFC Welcomes New Coach</h4>
+                <p>We’re thrilled to welcome Coach Jordan to the senior squad for 2025.</p>
+            </div>
+            <div class="news-card">
+                <h4>Junior Trials Announced</h4>
+                <p>U8–U16 trials will be held in February. Stay tuned for dates.</p>
+            </div>
+        </div>
+
+        <section class="content">
+            <h3>Club Calendar</h3>
+            <div class="calendar-grid">
+                <div class="calendar-day">
+                    <div class="day">Mon</div>
+                    <div class="event">Training (Juniors)<br><span>5:00 PM</span></div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day">Tue</div>
+                    <div class="event">Open Training<br><span>6:00 PM</span></div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day">Wed</div>
+                    <div class="event">Senior Match<br><span>7:30 PM</span></div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day">Thu</div>
+                    <div class="event">Goalkeeper Clinic<br><span>5:30 PM</span></div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day">Fri</div>
+                    <div class="event">Club Night<br><span>6:00 PM</span></div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day">Sat</div>
+                    <div class="event">Junior Games<br><span>8:00 AM</span></div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day">Sun</div>
+                    <div class="event">Senior Fixture<br><span>3:00 PM</span></div>
+                </div>
+            </div>
+            <a class="cta-button" href="https://www.uqfc.com.au/calendar" target="_blank">View Full Calendar</a>
+        </section>
+        <style>
+            .calendar-grid {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .calendar-day {
+                background-color: #f0f0f0;
+                border-radius: 8px;
+                padding: 1rem;
+                text-align: center;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            }
+
+            .calendar-day .day {
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                color: var(--primary-color);
+            }
+
+            .calendar-day .event {
+                font-size: 0.95rem;
+                color: #333;
+            }
+
+            .calendar-day .event span {
+                display: block;
+                font-size: 0.8rem;
+                color: #666;
+                margin-top: 0.25rem;
+            }
+
+            @media (max-width: 768px) {
+                .calendar-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        </style>
+
+        $1
+        <img src="sponsor1.png" alt="Sponsor 1">
+        <img src="sponsor2.png" alt="Sponsor 2">
+        <img src="sponsor3.png" alt="Sponsor 3">
+        <img src="sponsor4.png" alt="Sponsor 4">
+        <img src="sponsor5.png" alt="Sponsor 5">
+    </section>
+
+    <footer>
+        <p>&copy; 2025 UQFC. All rights reserved.</p>
+    </footer>
+</body>
+
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-links">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Logout</a>
+            <a href="#">Terms for Organisations</a>
+        </div>
+        <div class="majestri">
+            <img src="majestri-logo.png" alt="Majestri Logo" />
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="footer-bottom">
+        <p>© 2025 UQFC</p>
+        <div class="footer-logos">
+            <img src="logo-fq.png" alt="Football QLD" />
+            <img src="logo-fa.png" alt="Football Australia" />
+            <img src="logo-2star.png" alt="2 Star Club" />
+            <img src="logo-club.png" alt="Club Badge" />
+        </div>
+        <div class="social">
+            <a href="#"><img src="icon-facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="icon-twitter.svg" alt="Twitter" /></a>
+        </div>
+    </div>
+</footer>
+
+</html>
